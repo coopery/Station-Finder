@@ -10,38 +10,23 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Stations"
-        android:id="@+id/bGetStations"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Location"
-        android:id="@+id/bGetLocation" />
-
-    <ScrollView
-        android:id="@+id/SCROLLER_ID"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        android:fillViewport="true">
-
-        <TextView
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
+        <Switch
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:layout_below="@+id/bGetStations"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:maxLines="10000"
-            android:scrollbars="vertical"/>
-    </ScrollView>
+            android:text="Get station updates"
+            android:id="@+id/swListen"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvStations" />
 
 </LinearLayout>
